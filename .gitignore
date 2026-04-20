@@ -6,6 +6,7 @@ build
 
 # Ignore Kotlin plugin data
 .kotlin
-# my serialized app files
+
+# my serialized app files and class
 .class
 .dat

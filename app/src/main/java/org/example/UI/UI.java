@@ -19,6 +19,7 @@ import org.example.model.Task;
 import org.example.service.TaskService;
 
 public class UI extends JFrame {
+    // service instance for ui class
     private TaskService service;
 
     private JTextField descripTextField;
@@ -79,6 +80,11 @@ public class UI extends JFrame {
             String description = descripTextField.getText();
             Priority priority = (Priority) priorityBox.getSelectedItem();
 
+            //checking that the description field is not null or empty before adding task
+            if (description == null || description.trim().isEmpty()){
+                JOptionPane.showMessageDialog(this, "Description musy not be empty!!!");
+                return;
+            }
             Task newTask = new Task(description,priority);
             service.addTask(newTask);
 
@@ -94,7 +100,7 @@ public class UI extends JFrame {
         int selectedRow = taskTable.getSelectedRow();
 
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Select a task first");
+            JOptionPane.showMessageDialog(this, "Select a task first!!!!!");
             return;
         }
 

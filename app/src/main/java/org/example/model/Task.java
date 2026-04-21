@@ -35,7 +35,7 @@ public class Task implements Serializable{
     public String getDescription(){ return description; }
     public Priority getPriority(){ return priority; }
     public boolean isCompleted(){ return isCompleted; }
-    //overriding to string because of question even though i dont use it
+    //overriding to string 
     @Override
     public String toString() {
         String status =  isCompleted ? "Completed" : "Pending";

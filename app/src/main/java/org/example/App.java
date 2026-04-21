@@ -9,11 +9,16 @@ import org.example.Repo.FileTaskRepo;
 import org.example.UI.UI;
 import org.example.model.Task;
 import org.example.service.TaskService;
+
+import com.formdev.flatlaf.FlatLightLaf;
+
 public class App {
 
 public class Main {
     public static void main(String[] args) {
 
+        //
+        FlatLightLaf.setup();
         
         // running app
         SwingUtilities.invokeLater(() -> {

@@ -26,6 +26,7 @@ public class Task implements Serializable{
     public void setPriority(Priority prio){
         this.priority = prio;
     }
+    //method to mark task complete
     public void markCompleted(){
         this.isCompleted = true;
     }
@@ -35,7 +36,7 @@ public class Task implements Serializable{
     public String getDescription(){ return description; }
     public Priority getPriority(){ return priority; }
     public boolean isCompleted(){ return isCompleted; }
-    //overriding to string 
+    //overriding to string to return something fro display
     @Override
     public String toString() {
         String status =  isCompleted ? "Completed" : "Pending";

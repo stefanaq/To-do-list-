@@ -17,7 +17,7 @@ public class App {
 public class Main {
     public static void main(String[] args) {
 
-        //
+        // flatlaf to make the ui look better in my opinion
         FlatLightLaf.setup();
         
         // running app
@@ -29,7 +29,7 @@ public class Main {
             UI ui = new UI(service);
             ui.setVisible(true);
 
-            // fo testing
+            // fo testing toString()
             for (Task allTask : service.getAllTasks()) {
                 System.out.println(allTask.toString());
             }

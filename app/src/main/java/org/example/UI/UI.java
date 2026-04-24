@@ -43,9 +43,12 @@ public class UI extends JFrame {
         JPanel inputPanel = new JPanel();
 
         descripTextField = new JTextField(30);
+        //combobox for priority values High low and medium
         priorityBox = new JComboBox<>(Priority.values());
+        //add task button
         addTaskButton = new JButton("Add Task");
 
+        //text box for description and other elements
         inputPanel.add(new JLabel("Task: "));
         inputPanel.add(descripTextField);
         inputPanel.add(priorityBox);
@@ -53,7 +56,7 @@ public class UI extends JFrame {
 
         add(inputPanel, BorderLayout.NORTH);
 
-        //Center panel shit
+        //Center panel with table for displaying all tasks showing all info
         String[] columns = {"Description", "Priority", "Completed"};
         tableModel = new DefaultTableModel(columns,0);
         taskTable = new JTable(tableModel);
@@ -63,7 +66,7 @@ public class UI extends JFrame {
         //bottom panel stuff
         JPanel bottomPanel = new JPanel();
         markCompleteButton = new JButton("Mark Complete");
-
+        //mark completed button
         bottomPanel.add(markCompleteButton);
         add(bottomPanel,BorderLayout.SOUTH);
 
@@ -75,6 +78,7 @@ public class UI extends JFrame {
         }
 
         //Handler methods
+    @SuppressWarnings("UseSpecificCatch")
     private void handleAddTask() {
         try {
             String description = descripTextField.getText();
